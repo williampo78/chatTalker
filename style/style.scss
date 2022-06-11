@@ -1,153 +1,69 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
+@import "reset";
+@import "button";
 
 $primary: #221e1f;
 $green: #56c4c5;
+
 body {
   font-family: "Noto Sans TC", sans-serif;
+  color: $primary;
 }
+@import "to-top";
+.ball-1 {
+  position: absolute;
+  left: -225px;
+  top: 40%;
+  z-index: -3;
+}
+@media (max-width: 768px) {
+  .ball-1 {
+    position: absolute;
+    width: 125px;
+    left: -85px;
+    top: 760px;
+  }
+}
+.pricing-ball-3 {
+  width: 360px;
+  position: absolute;
+  top: 60%;
+  left: -280px;
+  z-index: -3;
+}
+@media (max-width: 768px) {
+  .pricing-ball-3 {
+    width: 204px;
+    position: absolute;
+    top: 100%;
+    left: -110px;
+  }
+}
+
 .banner-bg {
-  width: 100vw;
+  position: absolute;
+  top: 0;
+  width: 100%;
   height: 470px;
   border-radius: 0 0 0 300px;
   background: #f7f9fd;
   z-index: -2;
+}
+
+@media (max-width: 768px) {
+  .banner-bg {
+    top: 88px;
+    min-height: 495px;
+  }
+}
+.pricing-bg-small {
+  display: none;
+}
+@media (max-width: 768px) {
+  .pricing-bg-small {
+    display: block;
+    top: 88px;
+    position: absolute;
+  }
 }
 .wrap {
   max-width: 1085px;
@@ -156,464 +72,31 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: -1;
   }
   @media (max-width: 768px) {
     .bg {
       display: none;
     }
   }
-  header {
-    height: 88px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .logo {
-      width: 218px;
-      z-index: 2;
-      img {
-        max-width: 100%;
-      }
-    }
-    .checkPlan {
-      padding: 8px 32px;
-      line-height: 24px;
-      background: #ff5d50;
-      border-radius: 22px;
-      color: #fff;
-      border: none;
-      outline: none;
-      z-index: 2;
-    }
-  }
-  @media (max-width: 768px) {
-    header {
-      padding: 0 20px;
-      border-bottom: #ffd153 2px solid;
-      .logo {
-        width: 130px;
-      }
-    }
-  }
-  .banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: $primary;
-    .banner-text {
-      z-index: 2;
-      h1 {
-        color: $green;
-        font-size: 18px;
-        font-weight: bold;
-      }
-      h2 {
-        font-size: 48px;
-        font-weight: bold;
-        line-height: 70px;
-        margin: 8px 0 16px 0;
-      }
-      p {
-        font-size: 20px;
-      }
-    }
-    div {
-      z-index: 1;
-      width: 532px;
-      img {
-        max-width: 100%;
-      }
-      .bg-small {
-        display: none;
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    .banner {
-      flex-direction: column;
-      margin-top: 32px;
-      .banner-text {
-        z-index: 2;
-        h1 {
-          color: $green;
-          font-size: 18px;
-          font-weight: bold;
-        }
-        h2 {
-          font-size: 32px;
-          line-height: 46px;
-        }
-        p {
-          font-size: 16px;
-        }
-      }
-      div {
-        position: relative;
-        width: 90vw;
-        img {
-          width: 100%;
-          z-index: 1;
-        }
-        .bg-small {
-          display: block;
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-          z-index: -1;
-        }
-      }
-    }
-  }
-  .pricing-banner {
-    margin-top: 92px;
-    .banner-text {
-      p {
-        font-size: 16px;
-      }
-    }
-  }
-  .platforms {
-    max-width: 969px;
-    margin: 0 auto;
-    margin-top: 217px;
-    h2 {
-      text-align: center;
-      color: $primary;
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 48px;
-    }
-    ul {
-      display: flex;
-      justify-content: space-between;
-      li {
-        text-align: center;
-        width: 244px;
-        img {
-          max-width: 90px;
-        }
-        .name {
-          font-size: 24px;
-          font-weight: bold;
-          color: $primary;
-          margin: 24px 0;
-        }
-        .description {
-          color: #747474;
-          line-height: 24px;
-        }
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    .platforms {
-      margin-top: 60px;
-      h2 {
-        font-size: 28px;
-        margin-bottom: 32px;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        li {
-          margin: 12px 0;
-          img {
-            max-width: 60px;
-          }
-          .name {
-            font-size: 18px;
-            margin: 16px 0;
-          }
-        }
-      }
-    }
-  }
-  .roles {
-    margin: 100px 0 100px 0;
-    text-align: center;
-    color: $primary;
-    h2 {
-      font-size: 32px;
-      font-weight: bold;
-      line-height: 46px;
-    }
-    h3 {
-      font-size: 20px;
-      line-height: 29px;
-      margin: 16px 0 48px 0;
-    }
-    .cards {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 8px;
-      .card {
-        width: 260px;
-        height: 388px;
-        box-shadow: 0px 2px 10px #00000014;
-        overflow: hidden;
-        border-radius: 12px;
-        margin: 0 8px;
-        img {
-          max-width: 100%;
-        }
-        .role {
-          color: $green;
-          line-height: 24px;
-          margin: 16px 0 16px 0;
-        }
-        .description {
-          line-height: 24px;
-        }
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    .roles {
-      margin: 60px 0;
-      h2 {
-        font-size: 28px;
-        line-height: 40px;
-      }
-      h3 {
-        font-size: 18px;
-        line-height: 26px;
-        margin: 16px 0 32px 0;
-      }
-      .cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0 8px;
-        .card {
-          margin: 12px 0;
-          img {
-            max-width: 100%;
-          }
-          .role {
-            color: $green;
-            line-height: 24px;
-            margin: 16px 0 16px 0;
-          }
-          .description {
-            line-height: 24px;
-          }
-        }
-      }
-    }
-  }
-  .services {
-    display: flex;
-    align-items: center;
-    ul {
-      display: flex;
-      max-width: 507px;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-right: 137px;
-      li {
-        width: 230px;
-        height: 280px;
-        box-shadow: 0px 2px 10px #00000014;
-        border-radius: 12px;
-        padding: 32px;
-        margin: 14px 0;
-        div {
-          width: 86px;
-          height: 86px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          box-shadow: 0px 2px 10px #00000014;
-        }
-        h4 {
-          margin: 24px 0 16px 0;
-          font-size: 18px;
-          font-weight: bold;
-        }
-        p {
-          line-height: 24px;
-        }
-      }
-    }
-    .service-text {
-      text-align: center;
-      h2 {
-        color: $primary;
-        font-size: 32px;
-        line-height: 46px;
-        font-weight: bold;
-      }
-      p {
-        font-size: 18px;
-        line-height: 26px;
-        margin: 16px 0 24px 0;
-      }
-      button {
-        background: $green;
-        color: #fff;
-        font-size: 18px;
-        line-height: 26px;
-        padding: 12px 32px;
-        outline: none;
-        border: none;
-        border-radius: 27px;
-        cursor: pointer;
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    .services {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      ul {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        margin: 0;
-        margin-top: 32px;
-      }
-      .service-text {
-        h2 {
-          color: $primary;
-          font-size: 38px;
-          line-height: 40px;
-        }
-        p {
-          font-size: 16px;
-          line-height: 24px;
-        }
-      }
-    }
-  }
-
-  .rating {
-    margin: 100px 0;
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      line-height: 46px;
-      margin-bottom: 104px;
-    }
-    .cards {
-      display: flex;
-      justify-content: space-between;
-      .card {
-        position: relative;
-        color: $primary;
-        width: 352px;
-        height: 242px;
-        box-shadow: 0px 2px 10px #00000014;
-        border-radius: 12px;
-        padding: 48px 32px 24px 32px;
-        .avatar {
-          border-radius: 50%;
-          width: 80px;
-          position: absolute;
-          top: -55px;
-        }
-        .review {
-          line-height: 24px;
-          padding-bottom: 24px;
-          border-bottom: #ddd 1px solid;
-        }
-        div {
-          .company {
-            font-weight: bold;
-            margin: 24px 0 8px 0;
-            line-height: 24px;
-          }
-          .name {
-            display: flex;
-            justify-content: space-between;
-            line-height: 24px;
-            span {
-              img {
-                width: 16px;
-                margin: 0 3px 0 3px;
-              }
-            }
-          }
-        }
-      }
-    }
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 24px;
-      ul {
-        display: flex;
-        li {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #ddd;
-          margin: 0 4px;
-        }
-        .active {
-          width: 16px;
-          background: #ffd153;
-          border-radius: 50px;
-        }
-      }
-    }
-  }
-  @media (max-width: 768px) {
-    .rating {
-      margin: 60px 0;
-      h2 {
-        font-size: 28px;
-        line-height: 40px;
-        margin-bottom: 88px;
-      }
-      .cards {
-        display: flex;
-        justify-content: center;
-        .hide {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .plans {
-    text-align: center;
-    margin-top: 100px;
-    h3 {
-      color: $primary;
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 48px;
-    }
-    .options {
-      padding: 0 84px;
-      button {
-        padding: 12px 32px;
-        font-size: 18px;
-        line-height: 27px;
-        color: $green;
-        border-radius: 27px;
-        border: 1px solid $green;
-        outline: none;
-        background: #fff;
-        margin: 0 8px;
-        cursor: pointer;
-      }
-      .active {
-        background: $green;
-        color: #fff;
-      }
-    }
-  }
+  @import "header";
+  @import "banner";
+  @import "platforms";
+  @import "roles";
+  @import "services";
+  @import "rating";
 }
 @media (max-width: 768px) {
   .wrap {
     max-width: 90%;
   }
+}
+
+.pricing-wrap {
+  max-width: 909px;
+  margin: 0 auto;
+  margin-top: 280px;
+  @import "plans";
+  @import "faq";
 }
 .footer-banner {
   height: 503px;
@@ -629,40 +112,6 @@ body {
     font-weight: bold;
     margin-bottom: 60px;
   }
-  button {
-    background: $green;
-    color: #fff;
-    font-size: 18px;
-    line-height: 26px;
-    padding: 12px 32px;
-    outline: none;
-    border: none;
-    border-radius: 27px;
-    cursor: pointer;
-  }
-}
-@media (max-width: 735px) {
-  .footer-banner {
-    padding: 350px 0 100px 0;
-    color: $primary;
-    h2 {
-      font-size: 24px;
-      line-height: 35px;
-      font-weight: bold;
-      margin-bottom: 24px;
-    }
-    button {
-      background: $green;
-      color: #fff;
-      font-size: 18px;
-      line-height: 26px;
-      padding: 12px 32px;
-      outline: none;
-      border: none;
-      border-radius: 27px;
-      cursor: pointer;
-    }
-  }
 }
 .footer {
   display: flex;
@@ -672,4 +121,57 @@ body {
   background: #f5f5f5;
   color: $primary;
   line-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .pricing-wrap {
+    margin-top: 340px;
+  }
+  .footer-banner {
+    height: 503px;
+    background: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg")
+      no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 280px 0 100px 0;
+    color: $primary;
+    h2 {
+      font-size: 32px;
+      line-height: 46px;
+      font-weight: bold;
+      margin-bottom: 60px;
+    }
+  }
+  @media (max-width: 735px) {
+    .footer-banner {
+      padding: 350px 0 100px 0;
+      color: $primary;
+      h2 {
+        font-size: 24px;
+        line-height: 35px;
+        font-weight: bold;
+        margin-bottom: 24px;
+      }
+      button {
+        background: $green;
+        color: #fff;
+        font-size: 18px;
+        line-height: 26px;
+        padding: 12px 32px;
+        outline: none;
+        border: none;
+        border-radius: 27px;
+        cursor: pointer;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    background: #f5f5f5;
+    color: $primary;
+    line-height: 24px;
+  }
 }

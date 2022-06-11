@@ -1,0 +1,74 @@
+.swiper {
+  height: 380px;
+  .cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .card {
+      cursor: pointer;
+      position: relative;
+      color: $primary;
+      width: 340px;
+      height: 270px !important;
+      box-shadow: 0px 2px 10px #00000014;
+      border-radius: 12px;
+      padding: 48px 32px 24px 32px;
+      background: #fff;
+      .avatar {
+        border-radius: 50%;
+        width: 80px;
+        position: absolute;
+        top: -55px;
+      }
+      .review {
+        line-height: 24px;
+        padding-bottom: 24px;
+        border-bottom: #ddd 1px solid;
+      }
+      div {
+        .company {
+          font-weight: bold;
+          margin: 24px 0 8px 0;
+          line-height: 24px;
+        }
+        .name {
+          display: flex;
+          justify-content: space-between;
+          line-height: 24px;
+          span {
+            img {
+              width: 16px;
+              margin: 0 3px 0 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.swiper-pagination-bullet-active {
+  width: 16px;
+  background: #ffd153;
+  border-radius: 50px;
+}
+// .pagination {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 24px;
+//   ul {
+//     display: flex;
+//     li {
+//       width: 10px;
+//       height: 10px;
+//       border-radius: 50%;
+//       background: #ddd;
+//       margin: 0 4px;
+//     }
+//     .active {
+//       width: 16px;
+//       background: #ffd153;
+//       border-radius: 50px;
+//     }
+//   }
+// }

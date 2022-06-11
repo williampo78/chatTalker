@@ -1,0 +1,32 @@
+header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    width: 218px;
+    z-index: 2;
+    img {
+      max-width: 100%;
+    }
+  }
+  .checkPlan {
+    padding: 8px 32px;
+    line-height: 24px;
+    background: #ff5d50;
+    border-radius: 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    z-index: 2;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+    border-bottom: #ffd153 2px solid;
+    .logo {
+      width: 130px;
+    }
+  }
+}

@@ -11,9 +11,25 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
+    <div class="to-top"></div>
+    <img
+      class="ball-1"
+      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg"
+      alt=""
+    />
     <div class="wrap">
       <img
         class="bg"
@@ -84,6 +100,11 @@
           </li>
         </ul>
       </div>
+      <img
+        class="ball-2"
+        src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg"
+        alt=""
+      />
       <div class="roles">
         <h2>任何的角色，我都能給</h2>
         <h3>量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策</h3>
@@ -127,6 +148,7 @@
           </li>
         </ul>
       </div>
+
       <div class="services">
         <ul>
           <li>
@@ -186,151 +208,187 @@
             精準傳遞品牌資訊，打造個人化專屬服務 <br />
             不知不覺深入用戶生活，成為用戶貼心的好朋朋:D
           </p>
-          <button>方案費用</button>
+          <button class="button button-green">方案費用</button>
         </div>
       </div>
       <div class="rating">
+        <div>
+          <img
+            src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg"
+            alt=""
+            class="ball-3"
+          />
+        </div>
         <h2>好評如潮</h2>
-        <ul class="cards">
-          <li class="card">
-            <img
-              class="avatar"
-              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user01.jpg?raw=true"
-              alt=""
-            />
-            <p class="review">
-              原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
-            </p>
-            <div>
-              <p class="company">清心寡慾設計公司</p>
-              <p class="name">
-                Lina 執行長
-                <span>
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                </span>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <ul class="swiper-wrapper cards">
+            <li class="card swiper-slide">
+              <img
+                class="avatar"
+                src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user01.jpg?raw=true"
+                alt=""
+              />
+              <p class="review">
+                原來聊天機器人可以這麼有人性！團隊有完整的行銷計畫提供數位整合，讓我們公司的產品用更活潑的方式讓使用者認識。
               </p>
-            </div>
-          </li>
-          <li class="card hide">
-            <img
-              class="avatar"
-              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user02.jpg?raw=true"
-              alt=""
-            />
-            <p class="review">
-              團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
-            </p>
-            <div>
-              <p class="company">subwhat 行銷公司</p>
-              <p class="name">
-                Zoe 活動長
-                <span>
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                </span>
+              <div>
+                <p class="company">清心寡慾設計公司</p>
+                <p class="name">
+                  Lina 執行長
+                  <span>
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                  </span>
+                </p>
+              </div>
+            </li>
+            <li class="card swiper-slide">
+              <img
+                class="avatar"
+                src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user02.jpg?raw=true"
+                alt=""
+              />
+              <p class="review">
+                團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
               </p>
-            </div>
-          </li>
-          <li class="card hide">
-            <img
-              class="avatar"
-              src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user03.jpg?raw=true"
-              alt=""
-            />
-            <p class="review">
-              經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
-            </p>
-            <div>
-              <p class="company">油土伯</p>
-              <p class="name">
-                HowBig
-                <span>
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
-                    alt=""
-                  />
-                </span>
+              <div>
+                <p class="company">subwhat 行銷公司</p>
+                <p class="name">
+                  Zoe 活動長
+                  <span>
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                  </span>
+                </p>
+              </div>
+            </li>
+            <li class="card swiper-slide">
+              <img
+                class="avatar"
+                src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user03.jpg?raw=true"
+                alt=""
+              />
+              <p class="review">
+                經營了好久的IG，一直無法提升粉絲數，和團隊合作後，才知道可以用聊天機器人玩這麼豐富的行銷活動！太讚拉～
               </p>
-            </div>
-          </li>
-        </ul>
-        <div class="pagination">
-          <ul>
-            <li>
-              <a href=""></a>
+              <div>
+                <p class="company">油土伯</p>
+                <p class="name">
+                  HowBig
+                  <span>
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                  </span>
+                </p>
+              </div>
             </li>
-            <li>
-              <a href=""></a>
-            </li>
-            <li>
-              <a href=""></a>
-            </li>
-            <li class="active">
-              <a href=""></a>
+            <li class="card swiper-slide">
+              <img
+                class="avatar"
+                src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user02.jpg?raw=true"
+                alt=""
+              />
+              <p class="review">
+                團隊很積極的協助行銷追蹤，針對機器人進行優化，讓我們一個月內提高10000個追蹤者，客戶體驗回饋很正面！
+              </p>
+              <div>
+                <p class="company">subwhat 行銷公司</p>
+                <p class="name">
+                  Zoe 活動長
+                  <span>
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                    <img
+                      src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_star.svg"
+                      alt=""
+                    />
+                  </span>
+                </p>
+              </div>
             </li>
           </ul>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
     <div class="footer-banner">
       <h2>\ 美好用戶體驗，從對話開始 /</h2>
-      <button>方案費用</button>
+      <button class="button button-green">方案費用</button>
     </div>
     <div class="footer">
       <p>© 2022 chatTalker. All Rights Reserved.</p>
     </div>
+    <script src="/script/app.js"></script>
+    <script src="/script/rating-swiper.js"></script>
   </body>
 </html>

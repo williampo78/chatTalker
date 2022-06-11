@@ -1,0 +1,186 @@
+.plans-container {
+  text-align: center;
+  margin-top: 100px;
+  h2 {
+    color: $primary;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 48px;
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+    button {
+      border: 1px solid $green;
+      max-width: 145px;
+      min-width: 145px;
+    }
+    .active {
+      background: $green;
+      color: #fff;
+    }
+  }
+  .plans {
+    margin: 48px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+    .plan {
+      // padding: 0 25px;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 2px 10px #00000014;
+      border-radius: 12px;
+      width: 49%;
+      h3 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 35px;
+        padding: 10px 0;
+        // border-bottom: 1px solid #000;
+        margin-bottom: 32px;
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          background: #ddd;
+          bottom: -10px;
+          left: 0;
+        }
+      }
+      p {
+        line-height: 24px;
+      }
+      .outcome {
+        margin: 32px 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .block {
+          background: #f5f5f5 0% 0% no-repeat padding-box;
+          border-radius: 12px;
+          width: 169px;
+          height: 108px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          small {
+            font-size: 12px;
+            line-height: 27px;
+          }
+          p {
+            font-size: 32px;
+            line-height: 35px;
+            sub {
+              font-size: 12px;
+              line-height: 17px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+        .users-number {
+          color: $green;
+        }
+        .equal {
+          font-size: 29px;
+          line-height: 42px;
+          margin: 0 21px;
+        }
+      }
+      .plan-detail {
+        padding-left: 22px;
+        li {
+          text-align: left;
+          line-height: 24px;
+          margin: 16px 0;
+        }
+      }
+      button {
+        margin: 32px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-container {
+    h2 {
+      font-size: 28px;
+    }
+    .options {
+      overflow: auto;
+      button {
+        border: 1px solid $green;
+        margin: 0 8px;
+      }
+      .active {
+        background: $green;
+        color: #fff;
+      }
+    }
+    .plans {
+      margin: 48px 0 100px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .plan {
+        width: 92%;
+        margin: 32px 0;
+        h3 {
+          text-align: center;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 35px;
+          padding: 10px 0;
+          // border-bottom: 1px solid #000;
+          margin-bottom: 32px;
+          position: relative;
+          &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            background: #ddd;
+            bottom: -10px;
+            left: 0;
+          }
+        }
+        p {
+          line-height: 24px;
+        }
+        .outcome {
+          margin: 32px 0;
+          display: flex;
+          align-items: center;
+          .block {
+            width: 169px;
+            height: 108px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            p {
+              font-size: 28px;
+              line-height: 32px;
+            }
+          }
+          .equal {
+            font-size: 24px;
+            line-height: 35px;
+            margin: 0 6px;
+          }
+        }
+        .plan-detail {
+          li {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+}
